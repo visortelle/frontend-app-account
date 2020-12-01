@@ -3,5 +3,4 @@
 
 nick: acct
 oeps: {}
-owner: edx/platform-core-tnl
 openedx-release: {ref: master}
