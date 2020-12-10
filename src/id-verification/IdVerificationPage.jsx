@@ -30,7 +30,11 @@ function IdVerificationPage(props) {
   // Course run key is passed as a query string
   useEffect(() => {
     if (search) {
-      const parsed = qs.parse(search, { ignoreQueryPrefix: true });
+      const parsed = qs.parse(search, {
+        ignoreQueryPrefix: true,
+        charset: 'iso-8859-1',
+        interpretNumericEntities: true
+      });
       if (parsed.hasOwnProperty('course_id')) {
         sessionStorage.setItem('courseRunKey', parsed.course_id);
       }
